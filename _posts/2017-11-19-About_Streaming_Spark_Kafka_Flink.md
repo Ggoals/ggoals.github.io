@@ -42,7 +42,7 @@ title: Spark, Flink, Kafka Streaming ...
 
 ## Kafka streaming
 {{ 카프카 github 사진 }}
-Kafka 0.9 부터 Kafka Streaming Client 를 지원합니다.
+Kafka 0.9 부터 Kafka Streaming Client 를 지원합니다.<br/>
 현재는 1.0 버전을 드디어! 런칭하면서 그 발전속도가 세상을 깜짝 놀라게 합니다.
 
 Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kafka sql streaming 오픈소스가 나옵니다.
