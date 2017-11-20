@@ -10,13 +10,13 @@ title: Spark, Flink, Kafka Streaming ...
 
 
 
-
+<br/>
 #### ㅁ SQL Streaming
  - Spark's Structured Streaming
  - Flink's Data Stream SQL
  - Kafka's kSQL
  
- 
+ <br/>
 #### ㅁ 그 이외에 Streaming 에서 중요한 개념들!
  - Exactly Once, At most once, At least once
  - Time Windowed
@@ -29,13 +29,14 @@ title: Spark, Flink, Kafka Streaming ...
  매우 중요한 요소이지만 "어떻게 운영할 것인가? 운영포인트를 줄여갈 것인가?"도
  매우매우 중요한 요소입니다. 이게 없으면 Streaming F/W 이라 할 수 없죠.
  
- 
+<br/>
 #### ㅁ 위에서 한 얘기들 실제 Streaming 시스템에서 어떻게 처리하는지가 궁금하시다면! :)
 참조 : http://slides.com/yonghweekim/streaming-system# <br/>
 오늘 얘기에서는 위에 내용들을 어떻게 처리하고 관리하는지를 보기 위함은 아니라 패스 하겠습니다!<br/>
 나중에 기회가 되면 Spark Streaming 운영과 회고 발표 슬라이드도 글로 옮겨야 겠네요 ^^;<br/>
 
 
+<br/>
 <br/>
 <br/>
 ## Streaming Service
@@ -57,6 +58,7 @@ Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kaf
 ( 보통 상용에 대한 검증을 큰 회사에서 한번 해주면 믿고 가면 되거든요 ㅋㅋ ) <br/>
 (링크 : https://engineering.linecorp.com/ko/blog/detail/80 ) <br/>
 
+<br/>
 #### ㅁ Resource Manager
 카프카 스트림즈는 yarn 이나 mesus 같은 리소스 매니저를 통해 띄우지 않습니다. <br/>
 ( 물론 apache slider 나 다른 방법을 통해 띄우는 것들은 제외 하겠습니다. 기본 docs 에 없음을 말할 뿐 입니다) <br/>
@@ -67,12 +69,14 @@ Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kaf
  Streaming 서비스 같은 Long Running Service 들은 Stand Alone 형태로 띄울때가 ( = 네트워크 사용이나 리소스 사용이
  예측이 안되는 클러스터와는 별도의 존에서 ) 나을 수도 있다는 생각이 듭니다. <br/>
  
+ <br/>
 #### ㅁ Client's Service Discovery
 ![_config.yml]({{ site.baseurl }}/images/1/infra_book.jpeg) <br/>
 이 책을 인용하자면 "인프라에서 동작중인 애플리케이션과 서비스는 종종 다른 애플리케이션이나 서비스를 찾는 방법을 알아야한다"
 동일 토픽의 동일 group id 로 컨슘하고 있는 서버를 찾는 방법이 명령어 한줄에 뽝! 되는 그런 클린한 방법이 없습니다.
 즉, 관리하던사람이 아닌 잘 모르는 사람, 인수인계 받아야 하는 사람이 오면 문서 없이는 꽤 고생하겠죠 <br/>
 
+<br/>
 #### ㅁ Monitoring
 Kafka Streams Client 에 대한 모니터링이 존재하지 않습니다. ( = 별도로 붙여야 합니다. ) <br/>
 요샌 APM 이 쩌는게 워낙 많아서리... ㅎㅎ 
@@ -81,6 +85,7 @@ VM 이나 Application 에 대한 모니터링이 워낙 잘 되어 있어 그런
 Kafka Cluster 의 상태를 살펴 볼수 있는 Cruise Control for Apache Kafka 과 함께 쓰면 더 좋을것 같기도 하네요 :) <br/>
 ( 링크 : https://engineering.linkedin.com/blog/2017/08/open-sourcing-kafka-cruise-control ) <br/>
 
+<br/>
 #### ㅁ Streaming SQL Engine
 ![_config.yml]({{ site.baseurl }}/images/1/ksql_query.png)
 ![_config.yml]({{ site.baseurl }}/images/1/ksql_graph.png)
@@ -96,6 +101,7 @@ InfluxDB + Grafana 를 사용해서 Visualization 쉽게 가능하도록 되어 
 ## Spark Streaming
 ![_config.yml]({{ site.baseurl }}/images/1/spark_github.png)
 
+<br/>
 #### ㅁ This is not native streaming. Just "Micro Batch"
 스팍 스트리밍은 스트리밍이 아니죠. 마이크로 배치 입니다.
 event loop 가 돌며 batch job 을 계속 submit 하는 식으로 구현되어져 있습니다.
@@ -112,6 +118,7 @@ event loop 가 돌며 batch job 을 계속 submit 하는 식으로 구현되어�
 왜 Micro Batch 가 좋은지 느낄 수도 있을것 같아요 ( 아! 물론 개인차가 있을순 있습니다 ㅎㅎ ) <br/>
 이렇게 Micro Batch 로 나눠져 있다는게 코딩할때 생각보다 생각을 덜 하게 해줍니다. :)
 
+<br/>
 #### ㅁ Spark UI
 ![_config.yml]({{ site.baseurl }}/images/1/spark_dashboard.jpg)
 거의... 이거때문에 Spark 쓴다고 해도 과언이 아닐 정도로 잘 되어 있습니다.
@@ -144,18 +151,22 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 
 아래에서 Flink 특징들 보면서 기능상 장단점을 한번 볼게요. :) <br />
 
+<br/>
 #### ㅁ 모니터링 <br/>
 ![_config.yml]({{ site.baseurl }}/images/1/flink_running_job_dashboard.png)
 ![_config.yml]({{ site.baseurl }}/images/1/flink_task_dashboard.png)
 
+<br/>
 #### ㅁ Log finder <br/>
 ![_config.yml]({{ site.baseurl }}/images/1/flink_task_mager_dashboard.png) <br/>
 위 사진에서 보안상... :) 어쩔수 없이 삭제했찌만 Task Manager 를 보시면 내 job 이 실행되고 있는 Task Manager ( = Spark 의 executor 와 비슷한 개념 )
 들이 보입니다. Error 가 난 Task Manager 의 Hostname( or IP ) 도 뜨고 해당 Task Manager 의 Error 로그만, 전체로그만 따로 볼수 있습니다. <br/>
 
+<br/>
 #### ㅁ Job Start & Cancel <br/>
 역시 Dashboard에서 Job 을 Start 및 Stop 을 할수 있습니다. ( 몇가지 제약 조건이 있지만요 ^^; )<br/>
 
+<br/>
 #### ㅁ Docs..... good... <br/>
 Flink 는 정말 책을 읽는 다는 느낌이 들정도로 책이 자세합니다. 예를들어 <br />
 Best Practice : https://ci.apache.org/projects/flink/flink-docs-release-1.3/dev/best_practices.html <br/>
