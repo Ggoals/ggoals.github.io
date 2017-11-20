@@ -2,10 +2,12 @@
 layout: post
 title: Spark, Flink, Kafka Streaming ...
 ---
-![_config.yml]({{ site.baseurl }}/images/config.png)
+
 ## Streaming 101
 ㅁ Latency & Throughput
-{{ 사진 }}
+![_config.yml]({{ site.baseurl }}/images/1/latency1.png)
+![_config.yml]({{ site.baseurl }}/images/1/latency2.png)
+
 
 
 
@@ -140,13 +142,13 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 
 아래에서 Flink 특징들 보면서 기능상 장단점을 한번 볼게요. :) <br />
 
-#### ㅁ 모니터링
+#### ㅁ 모니터링 <br/>
 
-#### ㅁ Log finder
+#### ㅁ Log finder <br/>
 
-#### ㅁ Job Start & Cancel
+#### ㅁ Job Start & Cancel <br/>
 
-#### ㅁ Docs..... good...
+#### ㅁ Docs..... good... <br/>
 
 
 
@@ -160,19 +162,19 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 {{ 사진 }}
 
 아래 영상을 보시면 Spark 은 Streaming Join 이 불가능하지만,
-Flink 는 가능하다. 라는 설명이 나옵니다. 그만큼 스트리밍 관련되서 많이 발전된건 아직 Flink 인것 같네요. 그리고 Spark 의 Micro batch 또한 Streaming 에서는 그 한계를 보이는것 같습니다.
+Flink 는 가능하다. 라는 설명이 나옵니다. 그만큼 스트리밍 관련되서 많이 발전된건 아직 Flink 인것 같네요. 그리고 Spark 의 Micro batch 또한 Streaming 에서는 그 한계를 보이는것 같습니다. <br/>
 ( 링크 : https://www.youtube.com/watch?v=ZZevulsXp0g )
 
-ㅁ 수초의 Latency 도 견딜수 없다면 Kafka or Flink 를!
-위에서 설명했듯이 Spark 의 Micro Batch 구조상 1초 아래로 Duration 을 내리는게 거의 불가능하다 보시면 됩니다 :)
+ㅁ 수초의 Latency 도 견딜수 없다면 Kafka or Flink 를! <br/>
+위에서 설명했듯이 Spark 의 Micro Batch 구조상 1초 아래로 Duration 을 내리는게 거의 불가능하다 보시면 됩니다 :) <br/>
 
-ㅁ 쫌 더 세분화된 Windowed 기능을 이용하고 싶다면 Flink, Kafka 를!
-
-
-ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯!
+ㅁ 쫌 더 세분화된 Windowed 기능을 이용하고 싶다면 Flink, Kafka 를! <br/>
 
 
-ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?!
+ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯! <br/>
+
+
+ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?! <br/>
 
 
 
