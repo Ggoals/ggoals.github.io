@@ -43,7 +43,7 @@ title: Spark, Flink, Kafka Streaming ...
 
 <br/>
 ## Kafka streaming
-{{ 카프카 github 사진 }} <br/>
+![_config.yml]({{ site.baseurl }}/images/1/Kafka_github.png) <br/>
 Kafka 0.9 부터 Kafka Streaming Client 를 지원합니다.<br/>
 현재는 1.0 버전을 드디어! 런칭하면서 그 발전속도가 세상을 깜짝 놀라게 합니다.
 
@@ -56,7 +56,7 @@ Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kaf
 #### ㅁ Resource Manager
 카프카 스트림즈는 yarn 이나 mesus 같은 리소스 매니저를 통해 띄우지 않습니다. <br/>
 ( 물론 apache slider 나 다른 방법을 통해 띄우는 것들은 제외 하겠습니다. 기본 docs 에 없음을 말할 뿐 입니다) <br/>
-{{사진}} <br/>
+![_config.yml]({{ site.baseurl }}/images/1/yarn_stupid_developer.png) <br/>
 그게 꼭 나쁜걸까요? Yarn 이나 Mesus 나 Network Resource Managing 은 하지 못합니다. <br/>
 누군가 큰 쿼리를 돌리면 Streaming 서비스가 정상적으로 돌지 않는 ( 클러스터 전체가 정상적으로 돌지 않는 )
 상태가 발생하기도 합니다
