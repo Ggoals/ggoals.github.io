@@ -37,11 +37,14 @@ title: Spark, Flink, Kafka Streaming ...
 
 
 <br/>
+<br/>
 ## Streaming Service
  - 오늘은 Kafka, Spark, Flink :) 이 3개의 서비스를 한번 
 비교해볼까 합니다.
 
 
+<br/>
+<br/>
 <br/>
 ## Kafka streaming
 ![_config.yml]({{ site.baseurl }}/images/1/Kafka_github.png) <br/>
@@ -87,7 +90,9 @@ InfluxDB + Grafana 를 사용해서 Visualization 쉽게 가능하도록 되어 
 자세한 설명은 아래 링크에서 튜토리얼 영상을 보세요 :)
 ( 링크 : https://github.com/confluentinc/ksql )
 
-
+<br/>
+<br/>
+<br/>
 ## Spark Streaming
 짱이에요. 그저 말이 필요없습니다.
 ![_config.yml]({{ site.baseurl }}/images/1/spark_github.png)
@@ -128,8 +133,13 @@ Delay Time = Real Processing Time(실제 배치를 프로세싱 하는데 걸린
 
 
 #### ㅁ Log 보는법
-힘듭니다. {{ 쫌자세히쓰기 }}
+힘듭니다. 로그 설정을 어떻게 했는지에 따라 쫌 다르긴 하지만, 
+yarn 로그가 대체로 보기가 어렵습니다. 특히 long running service 의 경우 여러 executor의 log 가
+yarn 로그로 한번에 오면 어느 executor 에서 어떤 에러가 났는지 찾으려면 "아 이래서 쉘을 잘해야 하는구나..." 라는
+게 느껴지면서 더 열심히 공부하는 회사원이 되버립니다.
 
+<br/>
+<br/>
 <br/>
 ## Flink
 ![_config.yml]({{ site.baseurl }}/images/1/flink_github.png)
@@ -144,12 +154,26 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 아래에서 Flink 특징들 보면서 기능상 장단점을 한번 볼게요. :) <br />
 
 #### ㅁ 모니터링 <br/>
+![_config.yml]({{ site.baseurl }}/images/1/flink_running_job_dashboard.png)
+![_config.yml]({{ site.baseurl }}/images/1/flink_task_dashboard.png)
 
 #### ㅁ Log finder <br/>
+![_config.yml]({{ site.baseurl }}/images/1/flink_task_mager_dashboard.png)
+위 사진에서 보안상... :) 어쩔수 없이 삭제했찌만 Task Manager 를 보시면 내 job 이 실행되고 있는 Task Manager ( = Spark 의 executor 와 비슷한 개념 )
+들이 보입니다. Error 가 난 Task Manager 의 Hostname( or IP ) 도 뜨고 해당 Task Manager 의 Error 로그만, 전체로그만 따로 볼수 있습니다.
+무려 Web UI 에서요. 이건 운영을 하는데에 엄청난 장점을 가져다 줍니다.
 
 #### ㅁ Job Start & Cancel <br/>
+역시 Dashboard에서 Job 을 Start 및 Stop 을 할수 있습니다. ( 몇가지 제약 조건이 있지만요 ^^; )
 
 #### ㅁ Docs..... good... <br/>
+Flink 는 정말 책을 읽는 다는 느낌이 들정도로 책이 자세합니다. 예를들어 <br />
+Best Practice : https://ci.apache.org/projects/flink/flink-docs-release-1.3/dev/best_practices.html <br/>
+운영을 할때 이런부분을 조절해서 써라... 하는 가이드가 있습니다.
+Config : https://ci.apache.org/projects/flink/flink-docs-release-1.3/setup/config.html
+Config 설명도 엄청 자세히 나눠져 있구요.
+그리고 왜그러지 싶을 정도로 책들도 Flink 책들이 자세히 써 있습니다 ^^; (물론 제 개인적인 생각 ㅋㅋ )
+
 
 
 
@@ -171,10 +195,11 @@ Flink 는 가능하다. 라는 설명이 나옵니다. 그만큼 스트리밍 �
 위에서 설명했듯이 Spark 의 Micro Batch 구조상 1초 아래로 Duration 을 내리는게 거의 불가능하다 보시면 됩니다 :) <br/>
 
 ㅁ 쫌 더 세분화된 Windowed 기능을 이용하고 싶다면 Flink, Kafka 를! <br/>
-
+ - Session Windowed 기능은 Flink, Kafka 만 <br/>
+ - Count Windowed 기능은 Flink 만
 
 ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯! <br/>
-
+ - TensorflowonSpark ( 
 
 ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?! <br/>
 
