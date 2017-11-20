@@ -29,51 +29,51 @@ title: Spark, Flink, Kafka Streaming ...
  
  
 #### ㅁ 위에서 한 얘기들 실제 Streaming 시스템에서 어떻게 처리하는지가 궁금하시다면! :)
-참조 : http://slides.com/yonghweekim/streaming-system#/
+참조 : http://slides.com/yonghweekim/streaming-system# <br/>
 오늘 얘기에서는 위에 내용들을 어떻게 처리하고 관리하는지를 보기 위함은 아니라 패스 하겠습니다!<br/>
 나중에 기회가 되면 Spark Streaming 운영과 회고 발표 슬라이드도 글로 옮겨야 겠네요 ^^;<br/>
 
 
 
 ## Streaming Service Trend
-{{ 사진 }}
+{{ 사진 }} <br/>
 
 
 
 ## Kafka streaming
-{{ 카프카 github 사진 }}
+{{ 카프카 github 사진 }} <br/>
 Kafka 0.9 부터 Kafka Streaming Client 를 지원합니다.<br/>
 현재는 1.0 버전을 드디어! 런칭하면서 그 발전속도가 세상을 깜짝 놀라게 합니다.
 
-Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kafka sql streaming 오픈소스가 나옵니다.
-(링크 : https://github.com/confluentinc/ksql )
-최근에는 LINE Corperation 에서 상용서비스에 Kafka Streams 를 적용했고, 덕분에 Kafka 개발자들은 
-신이납니다. ( 보통 상용에 대한 검증을 큰 회사에서 한번 해주면 믿고 가면 되거든요 ㅋㅋ )
-(링크 : https://engineering.linecorp.com/ko/blog/detail/80 )
+Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kafka sql streaming 오픈소스가 나옵니다. <br/>
+(링크 : https://github.com/confluentinc/ksql ) <br/>
+최근에는 LINE Corperation 에서 상용서비스에 Kafka Streams 를 적용했고, 덕분에 Kafka 개발자들은  <br/>
+신이납니다. ( 보통 상용에 대한 검증을 큰 회사에서 한번 해주면 믿고 가면 되거든요 ㅋㅋ ) <br/>
+(링크 : https://engineering.linecorp.com/ko/blog/detail/80 ) <br/>
 
 #### ㅁ Resource Manager
-카프카 스트림즈는 yarn 이나 mesus 같은 리소스 매니저를 통해 띄우지 않습니다.
-( 물론 apache slider 나 다른 방법을 통해 띄우는 것들은 제외 하겠습니다. 기본 docs 에 없음을 말할 뿐 입니다)
-{{사진}}
-그게 꼭 나쁜걸까요? Yarn 이나 Mesus 나 Network Resource Managing 은 하지 못합니다.
+카프카 스트림즈는 yarn 이나 mesus 같은 리소스 매니저를 통해 띄우지 않습니다. <br/>
+( 물론 apache slider 나 다른 방법을 통해 띄우는 것들은 제외 하겠습니다. 기본 docs 에 없음을 말할 뿐 입니다) <br/>
+{{사진}} <br/>
+그게 꼭 나쁜걸까요? Yarn 이나 Mesus 나 Network Resource Managing 은 하지 못합니다. <br/>
 누군가 큰 쿼리를 돌리면 Streaming 서비스가 정상적으로 돌지 않는 ( 클러스터 전체가 정상적으로 돌지 않는 )
 상태가 발생하기도 합니다
  Streaming 서비스 같은 Long Running Service 들은 Stand Alone 형태로 띄울때가 ( = 네트워크 사용이나 리소스 사용이
- 예측이 안되는 클러스터와는 별도의 존에서 ) 나을 수도 있다는 생각이 듭니다.
+ 예측이 안되는 클러스터와는 별도의 존에서 ) 나을 수도 있다는 생각이 듭니다. <br/>
  
 #### ㅁ Client's Service Discovery
-{{ 인프라에즈코드책 }} 
-이 책을 인용하자면 "인프라에서 동작중인 애플리케이션과 서비스는 종종 다른 애플리케이션이나 서비스를 찾는 방법을 알아야한다"
-동일 토픽을 동일 group id 로 컨슘하고 있는 서버를 찾는 방법이 명령어 한줄에 뽝! 되는 그런 클린한 방법이 없습니다.
-즉, 관리하던사람이 아닌 잘 모르는 사람, 인수인계 받아야 하는 사람이 오면 문서 없이는 꽤 고생하겠죠
+{{ 인프라에즈코드책 }} <br/>
+이 책을 인용하자면 "인프라에서 동작중인 애플리케이션과 서비스는 종종 다른 애플리케이션이나 서비스를 찾는 방법을 알아야한다" <br/>
+동일 토픽을 동일 group id 로 컨슘하고 있는 서버를 찾는 방법이 명령어 한줄에 뽝! 되는 그런 클린한 방법이 없습니다. <br/>
+즉, 관리하던사람이 아닌 잘 모르는 사람, 인수인계 받아야 하는 사람이 오면 문서 없이는 꽤 고생하겠죠 <br/>
 
 #### ㅁ Monitoring
 Kafka Streams Client 에 대한 모니터링이 존재하지 않습니다. ( = 별도로 붙여야 합니다. )
 요샌 APM 이 쩌는게 워낙 많아서리... ㅎㅎ 
 VM 이나 Application 에 대한 모니터링이 워낙 잘 되어 있어 그런 부분의 솔루션이 회사에 존재한다면
 이부분도 해결은 가능합니다 :)
-Kafka Cluster 의 상태를 살펴 볼수 있는 Cruise Control for Apache Kafka 과 함께 쓰면 더 좋을것 같기도 하네요 :)
-( 링크 : https://engineering.linkedin.com/blog/2017/08/open-sourcing-kafka-cruise-control )
+Kafka Cluster 의 상태를 살펴 볼수 있는 Cruise Control for Apache Kafka 과 함께 쓰면 더 좋을것 같기도 하네요 :) <br/>
+( 링크 : https://engineering.linkedin.com/blog/2017/08/open-sourcing-kafka-cruise-control ) <br/>
 
 #### ㅁ Streaming SQL Engine
 {{ 사진 }}
