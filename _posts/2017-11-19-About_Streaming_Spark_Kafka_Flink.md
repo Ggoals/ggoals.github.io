@@ -185,8 +185,7 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 Flink 는 정말 책을 읽는 다는 느낌이 들정도로 책이 자세합니다. 예를들어 <br />
 Best Practice : [Flink's Best practice](https://ci.apache.org/projects/flink/flink-docs-release-1.3/dev/best_practices.html) <br/>
 운영을 할때 이런부분을 조절해서 써라... 하는 가이드가 있습니다.<br/>
-Config : [Flink's Config](https://ci.apache.org/projects/flink/flink-docs-release-1.3/setup/config.html)<br/>
-Config 설명도 엄청 자세히 나눠져 있구요.<br/>
+<br/>
 그리고 왜 그러지 싶을 정도로 책들도 Flink 책들이 자세히 써 있습니다 ^^; (물론 제 개인적인 생각 ㅋㅋ )
 (링크 : [OREILLY Flink books](http://shop.oreilly.com/product/0636920057321.do) )
 
