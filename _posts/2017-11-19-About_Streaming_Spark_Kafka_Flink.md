@@ -132,7 +132,7 @@ event loop 가 돌며 batch job 을 계속 submit 하는 식으로 구현되어�
 
 <br/>
 #### ㅁ Spark UI
-![_config.yml]({{ site.baseurl }}/images/1/spark_dashboard.jpg)
+![_config.yml]({{ site.baseurl }}/images/1/spark_dashboard.jpg) <br/>
 거의... 이거때문에 Spark 쓴다고 해도 과언이 아닐 정도로 잘 되어 있습니다.
 이거 없이 Spark 운영한다고 하는 사람은 Spark 운영을 하지 않은 사람일 것입니다.
 근데 이 부분 때문에 많은 오해가 생기기도 하더라구요.
