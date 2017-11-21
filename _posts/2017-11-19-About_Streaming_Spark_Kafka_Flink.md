@@ -158,7 +158,8 @@ Delay Time = Real Processing Time(실제 배치를 프로세싱 하는데 걸린
 ![_config.yml]({{ site.baseurl }}/images/1/flink_github.png)
 Streaming에 이상할 만큼 특화된(=잘만들어진) F/W Flink 입니다. <br/>
 Flink... 정말 Streaming 분야에서는 짱입니다.. <br />
-로고가 동물인게 마음에 듭니다. 역사적으로 로고가 동물인게 잘 되더라구요.<br />
+<br />
+그리고 로고가 동물인게 마음에 듭니다. 역사적으로 로고가 동물인게 잘 되더라구요.<br />
 Docker, Go, Linux 다 동물입니다 :) <br />
 ![_config.yml]({{ site.baseurl }}/images/1/docker_linux_go_img.png) <br />
 
