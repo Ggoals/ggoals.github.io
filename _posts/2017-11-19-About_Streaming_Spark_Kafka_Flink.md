@@ -13,8 +13,8 @@ title: Spark, Flink, Kafka Streaming ...
  서버가 처리하는 양이 줄어들면 메시지를 처리하는 속도가 느려질테고, Latency 는 점점 증가하겠죠. 이럴땐 Scale out 을 하건 더 빠른 처리가 가능하도록 로직을 수정하는 운영을 해줘야 합니다.
  
 ![_config.yml]({{ site.baseurl }}/images/1/Throughput.png) <br/>
-![_config.yml]({{ site.baseurl }}/images/1/throughput1.png) <br/>
  - Throughput : Streaming 서버의 시간당 처리량 <br/>
+ ![_config.yml]({{ site.baseurl }}/images/1/throughput1.png) <br/>
 메시지가 적을땐 Streaming Service 의 Throughput 이 시스템에 큰 영향을 주지 않습니다. 하지만 위처럼 유입되는 메시지가 많아지면 Streaming Service 의 Throughput 은 서비스의 품질을 결정짓는 중요한 요소가 됩니다. <br/>
   Latency 와 Throughput 은 보통 대략적으로 반비례 관계에 있다는 말을 합니다. Streaming 서비스의 Throughput 이 유입되는 Input 량보다 현저히 떨어지면 당연히 Latency 가 올라갈 것이고, Throughput 이  높은면 유입되는 Input 들을 빨리 빨리 처리할테니 Latency 는 줄어들 것입니다.
 
