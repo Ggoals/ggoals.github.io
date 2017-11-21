@@ -43,7 +43,7 @@ title: Spark, Flink, Kafka Streaming ...
  
 <br/>
 #### ㅁ 위에서 한 얘기들 실제 Streaming 시스템에서 어떻게 처리하는지가 궁금하시다면! :)
-참조 : http://slides.com/yonghweekim/streaming-system# <br/>
+참조 : [Spark Streaming 운영 및 회고](http://slides.com/yonghweekim/streaming-system#) <br/>
 오늘 얘기에서는 위에 내용들을 어떻게 처리하고 관리하는지를 보기 위함은 아니라 패스 하겠습니다!<br/>
 나중에 기회가 되면 Spark Streaming 운영과 회고 발표 슬라이드도 글로 옮겨야 겠네요 ^^;<br/>
 
