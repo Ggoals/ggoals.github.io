@@ -37,13 +37,13 @@ title: Spark, Flink, Kafka Streaming ...
  - How to Scale out
  - How to Monitoring Metric
  <br/>
- 결국 어려운건 운영... Streaming 시스템에서 Latency & Throughput 도 
+ 결국 어려운건 운영입니다... Streaming 시스템에서 Latency & Throughput 도 
  매우 중요한 요소이지만 "어떻게 운영할 것인가? 운영포인트를 줄여갈 것인가?"도
  매우매우 중요한 요소입니다. 이게 없으면 Streaming F/W 이라 할 수 없죠.
  
 <br/>
 #### ㅁ 위에서 한 얘기들 실제 Streaming 시스템에서 어떻게 처리하는지가 궁금하시다면! :)
-참조 : [Spark Streaming 운영 및 회고](http://slides.com/yonghweekim/streaming-system#) <br/>
+링크 : [Spark Streaming 운영 및 회고](http://slides.com/yonghweekim/streaming-system#) <br/>
 오늘 얘기에서는 위에 내용들을 어떻게 처리하고 관리하는지를 보기 위함은 아니라 패스 하겠습니다!<br/>
 나중에 기회가 되면 Spark Streaming 운영과 회고 발표 슬라이드도 글로 옮겨야 겠네요 ^^;<br/>
 
@@ -65,10 +65,10 @@ Kafka 0.9 부터 Kafka Streaming Client 를 지원합니다.<br/>
 현재는 1.0 버전을 드디어! 런칭하면서 그 발전속도가 세상을 깜짝 놀라게 합니다.
 
 Streaming 이 나온지 얼마 되지 않아 ksql 이라는 어마 무시한 kafka sql streaming 오픈소스가 나옵니다. <br/>
-(링크 : https://github.com/confluentinc/ksql ) <br/>
+(링크 : [ksql Github Repository](https://github.com/confluentinc/ksql) ) <br/>
 최근에는 LINE Corperation 에서 상용서비스에 Kafka Streams 를 적용했고, 덕분에 Kafka 개발자들은 신이납니다. <br/>
 ( 보통 상용에 대한 검증을 큰 회사에서 한번 해주면 믿고 가면 되거든요 ㅋㅋ ) <br/>
-(링크 : https://engineering.linecorp.com/ko/blog/detail/80 ) <br/>
+(링크 : [내부 데이터 파이프라인에 Kafka Streams 적용하기](https://engineering.linecorp.com/ko/blog/detail/80) ) <br/>
 
 <br/>
 #### ㅁ Resource Manager
@@ -95,7 +95,7 @@ Kafka Streams Client 에 대한 모니터링이 존재하지 않습니다. ( = �
 VM 이나 Application 에 대한 모니터링이 워낙 잘 되어 있어 그런 부분의 솔루션이 회사에 존재한다면
 이부분도 해결은 가능합니다 :)
 Kafka Cluster 의 상태를 살펴 볼수 있는 Cruise Control for Apache Kafka 과 함께 쓰면 더 좋을것 같기도 하네요 :) <br/>
-( 링크 : https://engineering.linkedin.com/blog/2017/08/open-sourcing-kafka-cruise-control ) <br/>
+( 링크 : [open-sourcing-kafka-cruise-control](https://engineering.linkedin.com/blog/2017/08/open-sourcing-kafka-cruise-control) ) <br/>
 
 <br/>
 #### ㅁ Streaming SQL Engine
@@ -105,7 +105,7 @@ Data Streaming 을 SQL 을 이용해서 Table 처럼 정의하고 Window 크기 
 빼서 사용이 가능하도록 만든 Kafka 만의 SQL Engine 입니다.
 InfluxDB + Grafana 를 사용해서 Visualization 쉽게 가능하도록 되어 있네요!
 자세한 설명은 아래 링크에서 튜토리얼 영상을 보세요 :) <br/>
-( 링크 : https://github.com/confluentinc/ksql )
+( 링크 : [KSQL github repository](https://github.com/confluentinc/ksql) )
 
 <br/>
 <br/>
@@ -181,11 +181,12 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 <br/>
 #### ㅁ Docs..... good... <br/>
 Flink 는 정말 책을 읽는 다는 느낌이 들정도로 책이 자세합니다. 예를들어 <br />
-Best Practice : https://ci.apache.org/projects/flink/flink-docs-release-1.3/dev/best_practices.html <br/>
+Best Practice : [Flink's Best practice](https://ci.apache.org/projects/flink/flink-docs-release-1.3/dev/best_practices.html) <br/>
 운영을 할때 이런부분을 조절해서 써라... 하는 가이드가 있습니다.<br/>
-Config : https://ci.apache.org/projects/flink/flink-docs-release-1.3/setup/config.html<br/>
+Config : [Flink's Config](https://ci.apache.org/projects/flink/flink-docs-release-1.3/setup/config.html)<br/>
 Config 설명도 엄청 자세히 나눠져 있구요.<br/>
 그리고 왜 그러지 싶을 정도로 책들도 Flink 책들이 자세히 써 있습니다 ^^; (물론 제 개인적인 생각 ㅋㅋ )
+(링크 : [OREILLY Flink books](http://shop.oreilly.com/product/0636920057321.do) )
 
 
 
@@ -202,7 +203,7 @@ Config 설명도 엄청 자세히 나눠져 있구요.<br/>
 
 아래 영상을 보시면 Spark 은 Streaming Join 이 불가능하지만,
 Flink 는 가능하다는 설명이 나옵니다. 그만큼 스트리밍 관련되서 많이 발전된건 아직 Flink 인것 같네요. 그리고 Spark 의 Micro batch 또한 Streaming 에서는 그 한계를 보이는것 같습니다. <br/>
-( 링크 : https://www.youtube.com/watch?v=ZZevulsXp0g )
+( 링크 : [Predictive Maintenance with Apache Flink - Dongwon Kim (SK telecom)](https://www.youtube.com/watch?v=ZZevulsXp0g) )
 
 ㅁ 수초의 Latency 도 견딜수 없다면 Kafka or Flink 를! <br/>
 위에서 설명했듯이 Spark 의 Micro Batch 구조상 1초 아래로 Duration 을 내리는게 거의 불가능하다 보시면 됩니다 :) <br/>
