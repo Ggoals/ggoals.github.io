@@ -36,7 +36,8 @@ title: Spark, Flink, Kafka Streaming ...
  - How to Fail-over, Alert, Restart
  - How to Scale out
  - How to Monitoring Metric
- <br/>
+<br/>
+<br/>
  결국 어려운건 운영입니다... Streaming 시스템에서 Latency & Throughput 도 
  매우 중요한 요소이지만 "어떻게 운영할 것인가? 운영포인트를 줄여갈 것인가?"도
  매우매우 중요한 요소입니다. 이게 없으면 Streaming F/W 이라 할 수 없죠.
