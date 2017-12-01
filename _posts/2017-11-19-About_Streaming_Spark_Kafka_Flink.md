@@ -10,12 +10,12 @@ title: Spark, Flink, Kafka Streaming ...
  - Latency : Processing 완료 시간 - Event 발생 시간 <br/>
  보통 이와 같이 정의됩니다. 하지만 이렇게 정의할 경우 위 그림처럼 사용자가 인터넷이 되지 않는 터널등의 구간에서의 Event 발생 ( = 엔지니어들이 해결해 줄수 없는 영역으로 인한 Latency ) 등이 있기에 보통 Latency 는 Event 발생 시간 대신 Log Collector 역할을 하는 서버가 로그를 받은 시간으로 대신하는 경우가 많습니다.
  <br/>
- 서버가 처리하는 양이 줄어들면 메시지를 처리하는 속도가 느려질테고, Latency 는 점점 증가하겠죠. 이럴땐 Scale out 을 하건 더 빠른 처리가 가능하도록 로직을 수정하는 운영을 해줘야 합니다.
+ 
  
 ![_config.yml]({{ site.baseurl }}/images/1/Throughput.png) <br/>
  - Throughput : Streaming 서버의 시간당 처리량 <br/>
  ![_config.yml]({{ site.baseurl }}/images/1/throughput1.png) <br/>
-메시지가 적을땐 Streaming Service 의 Throughput 이 시스템에 큰 영향을 주지 않습니다. 하지만 위처럼 유입되는 메시지가 많아지면 Streaming Service 의 Throughput 은 서비스의 품질을 결정짓는 중요한 요소가 됩니다. <br/>
+메시지가 적을땐 Streaming Service 의 Throughput 이 시스템에 큰 영향을 주지 않습니다. 하지만 위처럼 유입되는 메시지가 많아지면 Streaming Service 의 Throughput 은 서비스의 품질을 결정짓는 중요한 요소가 됩니다. 서버가 시간당 처리하는 메시지 양이 적으면 처리 속도가 느려질테고, Latency 는 점점 증가하겠죠. 이럴땐 Scale out 을 하건 더 빠른 처리가 가능하도록 로직을 수정하는 등의 운영을 해줘야 합니다. <br/>
   Latency 와 Throughput 은 보통 대략적으로 반비례 관계에 있다는 말을 합니다. Streaming 서비스의 Throughput 이 유입되는 Input 량보다 현저히 떨어지면 당연히 Latency 가 올라갈 것이고, Throughput 이  높으면 유입되는 Input 들을 빨리 빨리 처리할테니 Latency 는 줄어들 것입니다.
 
 
@@ -214,7 +214,12 @@ Flink 는 가능하다는 설명이 나옵니다. 그만큼 스트리밍 관련�
  - Count Windowed 기능은 Flink 만
 
 ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯! <br/>
-Spark Summit 2017 의 키노트 영상을 보면 Streaming 과 Deep Leaning 가장 핫한 키워드로 제시합니다. 이미 이 두 영역을 결합하려는 시도가 Spark 진형에서는 많이 일어나고 있습니다. 물론 Flink 도 지원을 하려는 시도가 많긴 합니다.
+Spark Summit 2017 의 키노트 영상을 보면 Streaming 과 Deep Leaning 가장 핫한 키워드로 제시합니다. 이미 이 두 영역을 결합하려는 시도가 Spark 진형에서는 많이 일어나고 있습니다. 그 예로 Tensorflowonspark 가 현재로썬 그나마 커밋수가 올라가는 중입니다... ㅎㅎ( 그나마 입니다... ㅠㅠ ) 물론 Flink 도 지원을 하려는 시도가 있긴 합니다. Flinkonspark 라고 Flink Forward 2017 에서 발표 된 프로젝트인데.. 이유는 모르겠지만 커밋이 멈췄습니다 ㅠㅠ ( Flink 힘내... ) 
+
+ㅁ Flink... 빨리 1.4 가 stable 로 올라가길... ㅠㅠ
+회사에 Flink 를 적용하려 했을 때 제일 당황스러웠던 문제가 1.3.2 Stable 버전이 회사 Yarn Cluster 에서 작동하지 않는 문제였습니다. 이유는 Job 을 컨트롤 할때 consitent hostname normalization 이 안된 탓인데요. 자세한 내용은 [Akka hostnames are not normalised consistently](https://issues.apache.org/jira/browse/FLINK-7540) 이곳을 참고해 주세요 :) <br/>
+TFServing(Tensorflow serving) 과의 연동 등등에서도 아직 1.3.2 는 문제가 있다고 합니다. 여튼 1.4 branch 에는 해당 내용도 같이 수정되어 
+merge 되었다고 하니 한번 기대해 보겠습니다.
 
 ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?! <br/>
 오늘은 Streaming Service 의 글을 다뤄서 Kafka 와 Flink 도 같이 다뤘습니다. 그리고 실제 업계에서 Streaming 만을 위한다면 그래도 Flink 가... 라는 말이 많이 있습니다. Project Scafolding 부터 Source, sink 의 개념을 이용한 connector 는 그 코드 또한 너무 간결하여 아릅다워 보이기까지 하니까요. 하지만 Spark 의 강점은 위에만 있는 것이 아닙니다. 수많은 Commiter, Star 수. Databricks 의 지원, 분석/ML/Batch/Python 호환, Deep Learning Integration 등 많은 영역의 범주를 포함하려 하는 방향성이 Spark 의 인기를 만든 것이라 생각합니다. 본인의 업무가 Streaming 만 하는게 아니라면 하나의 F/W 로 많은 것이 가능한 Spark 이 낫지 않을까 생각합니다.
