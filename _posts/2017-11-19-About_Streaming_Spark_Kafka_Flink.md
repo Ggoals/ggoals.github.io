@@ -166,15 +166,19 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 아래에서 Flink 특징들 보면서 기능상 장단점을 한번 볼게요. :) <br />
 
 <br/>
-#### ㅁ 모니터링 <br/>
-![_config.yml]({{ site.baseurl }}/images/1/flink_running_job_dashboard.png)
-![_config.yml]({{ site.baseurl }}/images/1/flink_task_dashboard.png)
+#### ㅁ Flink Dashboard <br/>
+![_config.yml]({{ site.baseurl }}/images/1/flink_running_job_dashboard.png) <br/>
+![_config.yml]({{ site.baseurl }}/images/1/flink_task_mager_dashboard.png) <br/>
+
+Flink Dashboard 를 이용해보신 분들이라면 Flink 의 매력에 푹 빠지실 겁니다.<br/>
+기본적인 모니터링 기능 제공 ( Job 의 상태, Task manager 별 Latency, Source/Sink Msg 수 등 ) 뿐 아니라 Log finder 기능 ( 진짜 이게 판타스틱! ), Job Submit/Cancel 등의 기능을 제공하고 있습니다.
 
 <br/>
 #### ㅁ Log finder <br/>
-![_config.yml]({{ site.baseurl }}/images/1/flink_task_mager_dashboard.png) <br/>
+![_config.yml]({{ site.baseurl }}/images/1/flink_task_dashboard.png) <br/>
 위 사진에서 보안상... :) 어쩔수 없이 삭제했만 Task Manager 를 보시면 내 job 이 실행되고 있는 Task Manager ( = Spark 의 executor 와 비슷한 개념 )
 들이 보입니다. Error 가 난 Task Manager 의 Hostname( or IP ) 도 뜨고 해당 Task Manager 의 Error 로그만, 전체로그만 따로 볼수 있습니다. <br/>
+운영해 보신 분들이라면 로그를 잘 적재하고, 에러가 났을 때 쉽게 에러난 부분을 찾는게 얼마나 귀찮고 짜증나는지 알 것입니다. 이거 때문에 로그 설정을 잘해야 하기도 하고, 더 나아가서는 yarn 설정 자체를 건드려줘야 하는 경우가 있을 수 있죠. 근데 Flink 는 정말정말 기본 설정이 잘 되어 있습니다. 에러가 나면 에러가 난 Task Manager 의 로그만 따로 볼 수 있도록 한점. 또 Error Stack Trace 로그만 따로 볼 수 있는 기능을 Dashboard 에서 제공해 줍니다.
 
 <br/>
 #### ㅁ Job Start & Cancel <br/>
