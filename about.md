@@ -52,5 +52,5 @@ Kim Yong Hwee ( nick : ggoals )
 
 <br/><br/>
 ### *Contact me*
-[yonghwee.kim@sk.com](mailto:yonghwee.kim@sk.com)
+[yonghwee.kim@sk.com](mailto:yonghwee.kim@sk.com)<br/>
 [fklh15@naver.com](mailto:fklh15@naver.com)
