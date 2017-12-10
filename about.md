@@ -9,7 +9,7 @@ Kim Yong Hwee ( nick : ggoals )
 ### Skill
 
  + Big Data
- + g
+ + + g
  
  - Front end
  
