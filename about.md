@@ -27,7 +27,7 @@ Kim Yong Hwee ( nick : ggoals )
 #### 2011 ~ 2015 Developer, Innovation LAB, pupleworks (퍼플웍스)
 
 <br/><br/>
-### ㅁ Project
+### *Project*
 #### 2017
  - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
  - Spark/Flink Streaming for Recommendation System
@@ -51,6 +51,6 @@ Kim Yong Hwee ( nick : ggoals )
  - Suhyang bluedog & bluedog baby Site
 
 <br/><br/>
-### Contact me
+### *Contact me*
 [yonghwee.kim@sk.com](mailto:yonghwee.kim@sk.com)
 [fklh15@naver.com](mailto:fklh15@naver.com)
