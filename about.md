@@ -31,10 +31,12 @@ Kim Yong Hwee ( nick : ggoals )
 #### 2017
 ##### Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
 ##### Spark/Flink Streaming for Recommendation System
+
 <br/>
 #### 2016
 ##### Hive, Spark for Recommendation System
 ##### BINS (Frontend with Angular) ( SNS Big Data Platform )
+
 <br/>
 #### 2011 ~ 2015
 ##### 청년포털 사이트 구축 ( Frontend with Angular 1.3 )
