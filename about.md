@@ -21,8 +21,11 @@ Kim Yong Hwee ( nick : ggoals )
 
 <br/><br/>
 ### Career & Activities
+
 #### 2016 ~ Manager, Personal Recommendation Team, SKplanet
+
 #### 2011 ~ 2015 Developer, Innovation LAB, pupleworks (퍼플웍스)
+
 <br/><br/>
 ### Project
 #### 2017
