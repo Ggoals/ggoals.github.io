@@ -6,7 +6,7 @@ permalink: /about/
 
 Kim Yong Hwee ( nick : ggoals )
 
-### Skill
+### ㅁ Skill
 
  - Primary Skill
    - Spark
@@ -20,14 +20,14 @@ Kim Yong Hwee ( nick : ggoals )
    - DB : MySQL
 
 <br/><br/>
-### Career & Activities
+### ㅁ Career & Activities
 
 #### 2016 ~ Manager, Personal Recommendation Team, SKplanet
 
 #### 2011 ~ 2015 Developer, Innovation LAB, pupleworks (퍼플웍스)
 
 <br/><br/>
-### Project
+### ㅁ Project
 #### 2017
  - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
  - Spark/Flink Streaming for Recommendation System
