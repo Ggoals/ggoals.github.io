@@ -6,7 +6,7 @@ permalink: /about/
 
 Kim Yong Hwee ( nick : ggoals )
 
-### ㅁ Skill
+### *Skill*
 
  - Primary Skill
    - Spark
@@ -20,7 +20,7 @@ Kim Yong Hwee ( nick : ggoals )
    - DB : MySQL
 
 <br/><br/>
-### ㅁ Career & Activities
+### *Career & Activities*
 
 #### 2016 ~ Manager, Personal Recommendation Team, SKplanet
 
