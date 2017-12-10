@@ -216,7 +216,7 @@ Flink 는 가능하다는 설명이 나옵니다. 그만큼 스트리밍 관련�
 ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯! <br/>
 Spark Summit 2017 의 키노트 영상을 보면 Streaming 과 Deep Leaning 가장 핫한 키워드로 제시합니다. 이미 이 두 영역을 결합하려는 시도가 Spark 진형에서는 많이 일어나고 있습니다. 그 예로 Tensorflowonspark 가 현재로썬 그나마 커밋수가 올라가는 중입니다... ㅎㅎ( 그나마 입니다... ㅠㅠ ) 물론 Flink 도 지원을 하려는 시도가 있긴 합니다. Flinkonspark 라고 Flink Forward 2017 에서 발표 된 프로젝트인데.. 이유는 모르겠지만 커밋이 멈췄습니다 ㅠㅠ ( Flink 힘내... ) 
 
-ㅁ Flink... 빨리 1.4 가 stable 로 올라가길... ㅠㅠ
+ㅁ Flink... 빨리 1.4 가 stable 로 올라가길... ㅠㅠ <br/>
 회사에 Flink 를 적용하려 했을 때 제일 당황스러웠던 문제가 1.3.2 Stable 버전이 회사 Yarn Cluster 에서 작동하지 않는 문제였습니다. 이유는 Job 을 컨트롤 할때 consitent hostname normalization 이 안된 탓인데요. 자세한 내용은 [Akka hostnames are not normalised consistently](https://issues.apache.org/jira/browse/FLINK-7540) 이곳을 참고해 주세요 :) <br/>
 TFServing(Tensorflow serving) 과의 연동 등등에서도 아직 1.3.2 는 문제가 있다고 합니다. 여튼 1.4 branch 에는 해당 내용도 같이 수정되어 
 merge 되었다고 하니 한번 기대해 보겠습니다.
