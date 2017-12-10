@@ -173,7 +173,7 @@ Docker, Go, Linux 다 동물입니다 :) <br />
 <br/>
 #### ㅁ Log finder <br/>
 ![_config.yml]({{ site.baseurl }}/images/1/flink_task_mager_dashboard.png) <br/>
-위 사진에서 보안상... :) 어쩔수 없이 삭제했찌만 Task Manager 를 보시면 내 job 이 실행되고 있는 Task Manager ( = Spark 의 executor 와 비슷한 개념 )
+위 사진에서 보안상... :) 어쩔수 없이 삭제했만 Task Manager 를 보시면 내 job 이 실행되고 있는 Task Manager ( = Spark 의 executor 와 비슷한 개념 )
 들이 보입니다. Error 가 난 Task Manager 의 Hostname( or IP ) 도 뜨고 해당 Task Manager 의 Error 로그만, 전체로그만 따로 볼수 있습니다. <br/>
 
 <br/>
