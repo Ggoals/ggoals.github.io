@@ -33,7 +33,9 @@ Kim Yong Hwee ( nick : ggoals )
 ##### Spark/Flink Streaming for Recommendation System
 
 <br/>
+
 #### 2016
+
 ##### Hive, Spark for Recommendation System
 ##### BINS (Frontend with Angular) ( SNS Big Data Platform )
 
