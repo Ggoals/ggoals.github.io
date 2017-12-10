@@ -218,7 +218,7 @@ Spark Summit 2017 의 키노트 영상을 보면 Streaming 과 Deep Leaning 가�
 
 ㅁ Flink... 빨리 1.4 가 stable 로 올라가길... ㅠㅠ <br/>
 회사에 Flink 를 적용하려 했을 때 제일 당황스러웠던 문제가 1.3.2 Stable 버전이 회사 Yarn Cluster 에서 작동하지 않는 문제였습니다. 이유는 Job 을 컨트롤 할때 consitent hostname normalization 이 안된 탓인데요. 자세한 내용은 [Akka hostnames are not normalised consistently](https://issues.apache.org/jira/browse/FLINK-7540) 이곳을 참고해 주세요 :) <br/>
-TFServing(Tensorflow serving) 과의 연동 등등에서도 아직 1.3.2 는 문제가 있다고 합니다. 여튼 1.4 branch 에는 해당 내용도 같이 수정되어 
+TFServing(Tensorflow serving) 과의 연동 등에서도 아직 1.3.2 는 문제가 있다고 합니다. 여튼 1.4 branch 에는 해당 내용도 같이 수정되어 
 merge 되었다고 하니 한번 기대해 보겠습니다.
 
 ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?! <br/>
