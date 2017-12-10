@@ -4,12 +4,17 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Kim Yong Hwee ( nick : ggoals )
 
-### More Information
+### Skill
 
-A place to include any other types of information that you'd like to include about yourself.
+ - Big Data
+ -- g
+ - Front end
+ 
+ - Back end
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[yonghwee.kim@sk.com](mailto:yonghwee.kim@sk.com)
+[fklh15@naver.com](mailto:fklh15@naver.com)
