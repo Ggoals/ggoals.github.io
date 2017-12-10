@@ -40,7 +40,9 @@ Kim Yong Hwee ( nick : ggoals )
 ##### BINS (Frontend with Angular) ( SNS Big Data Platform )
 
 <br/>
+
 #### 2011 ~ 2015
+
 ##### 청년포털 사이트 구축 ( Frontend with Angular 1.3 )
 ##### 2012 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
 ##### By Posting (Frontend) ( [Site](http://www.byposting.com/) )
