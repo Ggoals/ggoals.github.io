@@ -29,27 +29,26 @@ Kim Yong Hwee ( nick : ggoals )
 <br/><br/>
 ### Project
 #### 2017
-##### Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
-##### Spark/Flink Streaming for Recommendation System
+ - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
+ - Spark/Flink Streaming for Recommendation System
 
 <br/>
 
 #### 2016
-
-##### Hive, Spark for Recommendation System
-##### BINS (Frontend with Angular) ( SNS Big Data Platform )
+ - Hive, Spark for Recommendation System
+ - BINS (Frontend with Angular) ( SNS Big Data Platform )
 
 <br/>
 
 #### 2011 ~ 2015
 
-##### 청년포털 사이트 구축 ( Frontend with Angular 1.3 )
-##### 2012 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
-##### By Posting (Frontend) ( [Site](http://www.byposting.com/) )
-##### Find Model (Frontend & Backend)[Site](http://www.findmodel.co.kr/ModelFinder)
-##### Eland Mobile Office SI
-##### LGU+ Ad Platform SI
-##### Suhyang bluedog & bluedog baby Site
+ - 청년포털 사이트 구축 ( Frontend with Angular 1.3 )
+ - 2012 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
+ - By Posting (Frontend) ( [Site](http://www.byposting.com/) )
+ - Find Model (Frontend & Backend)[Site](http://www.findmodel.co.kr/ModelFinder)
+ - Eland Mobile Office SI
+ - LGU+ Ad Platform SI
+ - Suhyang bluedog & bluedog baby Site
 
 <br/><br/>
 ### Contact me
