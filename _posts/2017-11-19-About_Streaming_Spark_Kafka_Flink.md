@@ -201,7 +201,7 @@ Best Practice : [Flink's Best practice](https://ci.apache.org/projects/flink/fli
 아래는 개인적인 의견을 한번 정리해보았습니다.<br/>
 #### ㅁ 꼭 Resource manager 가 필요하다고는 생각 안합니다. <br/>
 
-
+<br/><br/>
 #### ㅁ 스트림즈만 하고 싶다면 Flink 를! <br/>
 ![_config.yml]({{ site.baseurl }}/images/1/Flink_forward_sk.png)
 
@@ -212,21 +212,26 @@ Flink 는 가능하다는 설명이 나옵니다. 그만큼 스트리밍 관련�
 <br/><br/>
 Data Strata 2017 in Singapore 에 다녀왔습니다. ( 생생한 후기는 다음 글에서 적을게요 ㅎㅎ ) 거기서 있던 [Top five mistakes when writing streaming applications](https://conferences.oreilly.com/strata/strata-sg/public/schedule/detail/62907) 발표에서 발표자가 Flink 를 제외한 다른 Streaming System 돌려까기를 시전했습니다. 보통 Streaming 시스템에서는 이런 부분을 이렇게 처리해야 해요... 아 근데 Flink 는 그냥 됩니다. 뭐 이런 말투로 말이죠... ㅎㅎ 국내에선 Flink 가 많이 인기가 없어보이지만 해외에선 사뭇 다른 느낌을 많이 받았습니다.
 
+<br/><br/>
 #### ㅁ 수초의 Latency 도 견딜수 없다면 Kafka or Flink 를! <br/>
 위에서 설명했듯이 Spark 의 Micro Batch 구조상 1초 아래로 Duration 을 내리는게 거의 불가능하다 보시면 됩니다 :) <br/>
 
+<br/><br/>
 #### ㅁ 쫌 더 세분화된 Windowed 기능을 이용하고 싶다면 Flink, Kafka 를! <br/>
  - Session Windowed 기능은 Flink, Kafka 만 <br/>
  - Count Windowed 기능은 Flink 만
 
+<br/><br/>
 #### ㅁ 딥러닝과의 Integration 을 고민한다면... 현재시점에선 Spark 일듯! <br/>
 Spark Summit 2017 의 키노트 영상을 보면 Streaming 과 Deep Leaning 가장 핫한 키워드로 제시합니다. 이미 이 두 영역을 결합하려는 시도가 Spark 진형에서는 많이 일어나고 있습니다. 그 예로 Tensorflowonspark 가 현재로썬 그나마 커밋수가 올라가는 중입니다... ㅎㅎ( 그나마 입니다... ㅠㅠ ) 물론 Flink 도 지원을 하려는 시도가 있긴 합니다. Flinkonspark 라고 Flink Forward 2017 에서 발표 된 프로젝트인데.. 이유는 모르겠지만 커밋이 멈췄습니다 ㅠㅠ ( Flink 힘내... ) 
 
+<br/><br/>
 #### ㅁ Flink... 빨리 1.4 가 stable 로 올라가길... ㅠㅠ <br/>
 회사에 Flink 를 적용하려 했을 때 제일 당황스러웠던 문제가 1.3.2 Stable 버전이 회사 Yarn Cluster 에서 작동하지 않는 문제였습니다. 이유는 Job 을 컨트롤 할때 consitent hostname normalization 이 안된 탓인데요. 자세한 내용은 [Akka hostnames are not normalised consistently](https://issues.apache.org/jira/browse/FLINK-7540) 이곳을 참고해 주세요 :) <br/>
 TFServing(Tensorflow serving) 과의 연동 등에서도 아직 1.3.2 는 문제가 있다고 합니다. 여튼 1.4 branch 에는 해당 내용도 같이 수정되어 
 merge 되었다고 하니 한번 기대해 보겠습니다.
 
+<br/><br/>
 #### ㅁ 난 하나밖에 못하오.... 라고 한다면 Spark 를?! <br/>
 오늘은 Streaming Service 의 글을 다뤄서 Kafka 와 Flink 도 같이 다뤘습니다. 그리고 실제 업계에서 Streaming 만을 위한다면 그래도 Flink 가... 라는 말이 많이 있습니다. Project Scafolding 부터 Source, sink 의 개념을 이용한 connector 는 그 코드 또한 너무 간결하여 아름다워 보이기까지 하니까요. 하지만 Spark 의 강점은 위에만 있는 것이 아닙니다. 수많은 Commiter, Star 수. Databricks 의 지원, 분석/ML/Batch/Python 호환, Deep Learning Integration 등 많은 영역의 범주를 포함하려 하는 방향성이 Spark 의 인기를 만든 것이라 생각합니다. 본인의 업무가 Streaming 만 하는게 아니라면 좀더 Full Framework 에 가까운 Spark 이 낫지 않을까 생각합니다.
 
