@@ -17,7 +17,7 @@ Kim Yong Hwee ( nick : ggoals )
  - Secondary Skill
    - Big Data : Hadoop, Hbase, Kafka, Zeppelin
    - Backend( Node, Spring, .Net )
-   - DB : MySQL
+   - DB : Redis, MySQL
 
 <br/><br/>
 ### *Career & Activities*
