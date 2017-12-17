@@ -29,8 +29,10 @@ Kim Yong Hwee ( nick : ggoals )
 <br/><br/>
 ### *Project*
 #### 2017
- - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
  - Spark/Flink Streaming for Recommendation System
+ - Bigdata Infra for Recommendation System
+ - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
+
 
 <br/>
 
