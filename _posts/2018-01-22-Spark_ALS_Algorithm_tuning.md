@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Spark ALS Tuning By Intel ...
