@@ -1,6 +1,7 @@
+
 ---
 layout: post
-title: Spark ALS Tuning By Intel... ( 부제 : 부흥하라 데이터 엔지니어!! )
+title: Spark ALS Tuning By Intel ...
 ---
 
 ## Overview
