@@ -38,7 +38,7 @@ Kim Yong Hwee ( nick : ggoals )
 
 #### 2017
  - Spark/Flink Streaming for Recommendation System
- - Developing Recommendation Enging ( with Spark )
+ - Developing Recommendation Engine ( with Spark )
  - Bigdata Infra for Recommendation System
  - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
 
