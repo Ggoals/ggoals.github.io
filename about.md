@@ -28,8 +28,17 @@ Kim Yong Hwee ( nick : ggoals )
 
 <br/><br/>
 ### *Project*
+#### 2018 ( Current )
+ - MF Recommendation-Engine Enhanced&Tuning ( with Spark )
+ - Refactoring Architecture of Recopick( SKP's Recommendation ) Service in AWS
+ - Realtime Marketing Platform ( with Flink )
+
+
+<br/>
+
 #### 2017
  - Spark/Flink Streaming for Recommendation System
+ - Developing Recommendation Enging ( with Spark )
  - Bigdata Infra for Recommendation System
  - Colloseo(SKP's Recommendation Platform) Dashboard ( with Node, React )
 
@@ -37,8 +46,8 @@ Kim Yong Hwee ( nick : ggoals )
 <br/>
 
 #### 2016
- - Hive, Spark for Recommendation System
- - BINS (Frontend with Angular) ( SNS Big Data Platform )
+ - Hive, Spark ETL for Recommendation System
+ - BINS (Frontend & Backend with Sparing & Angular) ( SNS Big Data Platform )
 
 <br/>
 
