@@ -57,9 +57,9 @@ Kim Yong Hwee ( nick : ggoals )
  - 2012 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
  - By Posting (Frontend) ( [Site](http://www.byposting.com/) )
  - Find Model (Frontend & Backend)[Site](http://www.findmodel.co.kr/ModelFinder)
- - Eland Mobile Office SI
- - LGU+ Ad Platform SI
- - Suhyang bluedog & bluedog baby Site
+ - Eland Mobile Office Dev & Operation
+ - LGU+ Ad Platform Dev
+ - Suhyang bluedog & bluedog baby Site Dev & Operation
 
 <br/><br/>
 ### *Contact me*
