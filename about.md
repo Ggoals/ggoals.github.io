@@ -18,6 +18,7 @@ Kim Yong Hwee ( nick : ggoals )
    - Big Data : Hadoop, Hbase, Kafka, Zeppelin
    - Backend( Node, Spring, .Net )
    - DB : Redis, MySQL
+   - Etc : Elasticsearch
 
 <br/><br/>
 ### *Career & Activities*
