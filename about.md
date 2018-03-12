@@ -47,7 +47,7 @@ Kim Yong Hwee ( nick : ggoals )
 
 #### 2016
  - Hive, Spark ETL for Recommendation System
- - BINS (Frontend & Backend with Sparing & Angular) ( SNS Big Data Platform )
+ - BINS (Frontend & Backend with Spring & Angular) ( SNS Big Data Platform )
 
 <br/>
 
