@@ -53,9 +53,10 @@ Kim Yong Hwee ( nick : ggoals )
 <br/>
 
 #### 2011 ~ 2015
-
+ - 중국 출장 2015 wconcept 모바일 쇼핑몰 사이트 구축 ( with magento, React )
+ - 브라질 출장 2014 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
+ - 중국 출장 2012 Eland Systems Mobile F/W 사내 강사 초빙 ( Frontend & Backend )
  - 청년포털 사이트 구축 ( Frontend with Angular 1.3 )
- - 2012 현대 자동차 월드컵 프로모션 ( Frontend & Backend )
  - By Posting (Frontend) ( [Site](http://www.byposting.com/) )
  - Find Model (Frontend & Backend)[Site](http://www.findmodel.co.kr/ModelFinder)
  - Eland Mobile Office Dev & Operation
