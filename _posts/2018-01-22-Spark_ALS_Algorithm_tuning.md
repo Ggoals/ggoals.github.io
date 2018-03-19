@@ -50,7 +50,7 @@ CF 의 한 종류인 MF 를 하는 방법중 하나 인데요. User to Item 의 
 <br/>
 
 ## Problem
-###ㅁ GC Problem and OOM frequently in recommendForAll method
+### ㅁ GC Problem and OOM frequently in recommendForAll method
 링크 : [SPARK-20446](https://issues.apache.org/jira/browse/SPARK-20446)
 <br/>
 내용은 간단합니다. User Vector * Item Vector 계산 시에 Top Item 을 뽑아오는 로직에서 계산된 모든 결과를 저장하지 않고 가져올 Top N 의 갯수만 저장하겠다는 것입니다. 이전에는 User 별로 Item Prediction Score 를 전부 저장하고 그 걸 sorting 해서 top N 을 가져오는 것이였는데, Item 갯수가 많을 경우 당연히 시스템이 뻗겠죠 ^^;
@@ -109,7 +109,7 @@ Spark 을 튜닝할때 가장 키포인트가 뭘까요? <br/>
 
 
 <br/>
-###ㅁ Block-Size is static 
+### ㅁ Block-Size is static 
 링크 : [SPARK-20443](https://issues.apache.org/jira/browse/SPARK-20443)
 <br/>
 ![_config.yml]({{ site.baseurl }}/images/als-algorithm-tuning/4.png) <br/>
@@ -167,7 +167,7 @@ blockSize rank=10 rank = 100
 
 
 <br/>
-###ㅁ Optimize the Cartesian RDD
+### ㅁ Optimize the Cartesian RDD
 링크 : [SPARK-20638](https://issues.apache.org/jira/browse/SPARK-20638)
 <br/>
 core/src/main/scala/org/apache/spark/rdd/CartesianRDD.scala
@@ -201,7 +201,7 @@ Cartesian RDD ( Spark core ) 에 문제가 쫌 있습니다. Large size 한 RDD 
 
 
 <br/>
-###ㅁ The BKM (best known methods) of using native BLAS to improvement ML/MLLIB performance
+### ㅁ The BKM (best known methods) of using native BLAS to improvement ML/MLLIB performance
 링크 : [SPARK-21305](https://issues.apache.org/jira/browse/SPARK-21305)
 <br/>
 **추가**
@@ -217,11 +217,14 @@ Cartesian RDD ( Spark core ) 에 문제가 쫌 있습니다. Large size 한 RDD 
 <br/>
 Spark ML, MLLIB 에서 사용하는 BLAS 라는 library 에서 multi threading 을 쓰는 설정이 이상하다고 하네요. 위와 같이 수정하고 쓰면 좀 더 나은 성능을 볼 수 있다고 합니다. (아, 물론 MKL, BLAS 를 잘 쓰시려면 빌드단계부터 운영 환경과 맞춰 잘 해줘야 합니다. )
 
-
-##Result
+<br/>
+<br/>
+## Result
 음... 일단은 위에 수정된 내용들이 전부 Master Branch 에 적용된 상태는 아닙니다. 결국 RDD 기반의 mllib 을 쓸거면 반영이 안된 부분은 본인이 수정해서 쓰던지... DF기반의 ml 을 써도 마찬가지 입니다. cartesianRDD 만 crossjoin 으로 대체 가능한 거지 나머지 부분은 수정해서 써야 한다는 것이지요. 하지만 작은 사이즈는 문제가 없습니다. ^^ 그래도 역시 Spark 이니까요 ㅎㅎ ~~이것저것 다 귀찮으시면... 2.3rc-1 으로 해보셔도 괜찮을 듯 싶습니다 ㅎㅎ ( 해보진 않았습니다. ) 2.3 이 latest stable 로 빨리 올라오길 기원합니다.~~ ( 이 글의 초안을 쓴지도 어엿 2~3달이 지났네요 ^^; ㅎㅎ 이제는 2.3 이 latest stable 입니다. )
+<br/>
+<br/>
 
-##부흥하라! 데이터 엔지니어여
+## 부흥하라! 데이터 엔지니어여
 자! 이제 다시 돌아와서 ㅎㅎ 
 <br/>
 사실 최근에 굉장히 고민이 많았습니다. 최근에 워낙 분석이나 ML/DL이 각광받다보니 서버나 엔지니어링 쪽 공부보단 분석이나 모델링 공부를 많이 해야겠다고 많이 느꼈습니다. 하지만 하면서 고민되었던게 내 커리어는 엔지니어로 계속 가고 싶은데 이렇게 공부하고 일을 하면서 과연 내가 2~3년 뒤에는 내 커리어는 뭐가 되어 있을까? 라는 고민을 많이 하게 되었죠.
