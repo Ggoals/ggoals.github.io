@@ -4,10 +4,10 @@ title: Personalization Recommend in SK planet
 ---
 
 ## Slide
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/iOuxCNgtAquVgG" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/JaehoonJung/sk-ict-tech-summit-2017-sk-planet" title="SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 " target="_blank">SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 </a> </strong> from <strong><a href="https://www.slideshare.net/JaehoonJung" target="_blank">Jaehoon Jung</a></strong> </div>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/lF7fii80fQoC5M" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/JaehoonJung/skplanet-sk-ict-tech-summit-2017-skplanet-sk-ict-tech-summit-2017" title="SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 " target="_blank">SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 SKPlanet 추천 플랫폼 콜로세오 - SK ICT Tech Summit 2017 </a> </strong> from <strong><a href="https://www.slideshare.net/JaehoonJung" target="_blank">Jaehoon Jung</a></strong> </div>
 
 ## Summary
-링크 : [Slide Share 링크](https://www.slideshare.net/JaehoonJung/sk-ict-tech-summit-2017-sk-planet?ref=https://readme.skplanet.com/?p=13903)
+링크 : [Slide Share 링크](https://www.slideshare.net/JaehoonJung/skplanet-sk-ict-tech-summit-2017-skplanet-sk-ict-tech-summit-2017)
 <br/>
 2016 ~ 2017년 동안 구축한 SK planet 의 개인화 추천 플랫폼 Colloseo 에 대한 내용입니다.
 <br/>
