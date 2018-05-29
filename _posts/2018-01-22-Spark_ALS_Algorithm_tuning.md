@@ -194,7 +194,9 @@ override def compute(split: Partition, context: TaskContext): Iterator[(T, U)] =
 <br/>
 Cartesian RDD ( Spark core ) 에 문제가 쫌 있습니다. Large size 한 RDD 를 cartesian join 할 경우 곱해져야 할 RDD 가 중복되어서 계속 전송하게 됩니다. 사실 한번 전송 받은 RDD ( 여기서는 block 이라고 할까요? matrix 연산을 block 단위로 하고 있으니까요 ㅎㅎ ). block 은 전송할 필요가 없습니다. 그래서 RDD 의 저장 방식을 변경하고 local ( excecutor ) 에 저장하고 있다고 없을때만 전송받고 있을 땐 memory or disk 에서 꺼내서 계산합니다.
 <br/>
-![_config.yml]({{ site.baseurl }}/images/als-algorithm-tuning/5.png) <br/>
+링크 : 소스 참조 (https://github.com/apache/spark/pull/17936/files) <br/>
+
+
 <br/>
 아.. DF 를 쓰는 spark 2.x 에서는 내부적으로 cross join 이 구현 되어 잇어 key optimazation 을 탑니다. 크게 성능 저하가 없습니다. 이미 테스트도 완료했으니 2.x 를 쓰시는 분들은 그냥 쓰셔도 괜찮아요 ^^ (참고로 이 부분은 spark core 부분이라 그런지 아직 fixed 되지 않은 부분입니다.)
 <br/>
